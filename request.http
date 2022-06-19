@@ -1,0 +1,97 @@
+###Obtener todos los empleados
+GET http://localhost:3000/api/empleadosAng HTTP/1.1
+Content-Type: application/json
+
+###Insertar Empleado
+POST http://localhost:3000/api/empleadosAng HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pedro Paramo ",
+    "puesto": "Developer ",
+    "departamento": "Compuert Sciences 11",
+    "salario": 22000
+}
+
+###Consultar por ID
+GET http://localhost:3000/api/empleadosAng/626dd02738893b9e0b126fb0 HTTP/1.1
+
+
+###Actualizar empleado
+PUT http://localhost:3000/api/empleadosAng/626dd02738893b9e0b126fb0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pedro Paramo2",
+    "puesto": "Developer JR122",
+    "departamento": "Compuert Sciences321",
+    "salario": 220020
+}
+
+###Eliminar empleado
+DELETE http://localhost:3000/api/empleadosAng/626dd02738893b9e0b126fb0 HTTP/1.1
+Content-Type: application/json
+
+###Iniciar Sesion 
+POST http://localhost:3000/api/login HTTP/1.1
+
+
+////////////////////////////////////////////////USUARIOS///////////////////////////////////////////
+
+
+###Obtener Usuarios
+GET http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOTUwNDRiODdlZmU3MWJkZjU2YmVmNCIsIm5hbWUiOiJadWxlbWEgVHJlam8iLCJlbWFpbCI6Inp1bGVtYXRyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJGwucmRCRHZmTktoMzlEUnZYNjV3SE9YV09pM1A3U0xwS09zMTJ0RjVDcHNIeWw3Q2dEMTYyIiwidGlwbyI6IjEiLCJfX3YiOjB9LCJpYXQiOjE2NTUyMjM5MTIsImV4cCI6MTY1NTIyNzUxMn0.M-cFvewFKrudUkfNpQaO17XC8vhlge08yBse2pN55pY
+
+###Crear un usuario
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+Authorization: token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOTUwNDRiODdlZmU3MWJkZjU2YmVmNCIsIm5hbWUiOiJadWxlbWEgVHJlam8iLCJlbWFpbCI6Inp1bGVtYXRyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJGwucmRCRHZmTktoMzlEUnZYNjV3SE9YV09pM1A3U0xwS09zMTJ0RjVDcHNIeWw3Q2dEMTYyIiwidGlwbyI6IjEiLCJfX3YiOjB9LCJpYXQiOjE2NTUxMzAxOTEsImV4cCI6MTY1NTEzMzc5MX0.S7Nw7A8C39093EiuJ4D9tmuLB91TFpj7KODULV65ghg
+
+{
+    "name": "David",
+    "email":"David@gmail.com",
+    "password": "123456",
+    "tipo": 1
+
+}
+
+###Autenticar Usuario
+POST http://localhost:3000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+   "email":"zulematr@gmail.com",
+    "password": "zule123"
+}
+
+
+###Consultar por ID
+GET http://localhost:3000/api/users/628fb10f65ae2273a4f0998d/ HTTP/1.1
+Content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozfSwiaWF0IjoxNjUyNzIwNTQ2fQ.rmewqWGUnJIwCUzEbp5TDFHMg7P0gjl7C512LFGrA_s
+
+{
+    "name": "Ivan2",
+    "email":"ivan2@gmail.com",
+    "password": "ivan123"
+}
+
+###Eliminar
+DELETE http://localhost:3000/api/users/6294eed9f242120fea3eb0b9/ HTTP/1.1
+Content-Type: application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozfSwiaWF0IjoxNjUyNzIwNTQ2fQ.rmewqWGUnJIwCUzEbp5TDFHMg7P0gjl7C512LFGrA_s
+
+
+###Modificar por ID
+PUT http://localhost:3000/api/users/62a778a4efa0dfb38a71e9a3 HTTP/1.1
+Content-Type: application/json
+Authorization: token-auth eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyOTUwNDRiODdlZmU3MWJkZjU2YmVmNCIsIm5hbWUiOiJadWxlbWEgVHJlam8iLCJlbWFpbCI6Inp1bGVtYXRyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJGwucmRCRHZmTktoMzlEUnZYNjV3SE9YV09pM1A3U0xwS09zMTJ0RjVDcHNIeWw3Q2dEMTYyIiwidGlwbyI6IjEiLCJfX3YiOjB9LCJpYXQiOjE2NTUyMjM5MTIsImV4cCI6MTY1NTIyNzUxMn0.M-cFvewFKrudUkfNpQaO17XC8vhlge08yBse2pN55pY
+
+{
+    "name": "Julia Gonzales1",
+    "email":"juliareyes239@gmail.com",
+    "password": "julia23"
+}
+
